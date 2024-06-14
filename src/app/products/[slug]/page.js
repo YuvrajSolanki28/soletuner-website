@@ -26,7 +26,7 @@ export async function generateMetadata({params:{slug}}){
         notFound()
     }
     return {
-        title:`Dev Product | ${product.name}`
+        title:`soleturner | ${product.name}`
     }
 }
 
