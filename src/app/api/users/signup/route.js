@@ -1,15 +1,15 @@
-import {connect} from '@/dbConfig/dbConfig'
-import User from '@/models/userModel'
+import { connect } from '../../../../dbConfig/dbConfig'
+import User from '../../../../models/userModels'
 import { NextRequest, NextResponse } from 'next/server'
 import bcryptjs from 'bcryptjs'
-import {sendEmail} from '@/helpers/mailer'
+import {sendEmail} from '../../../../helpers/mailer'
 connect()
 
-export async function POST(request: NextRequest){
+export async function POST(request){
 
     try {
         const reqBody =await request.json()
-        const {username, eamil, password}= reqBody
+        const {username, email, password}= reqBody
 
         console.log(reqBody);
 
@@ -24,15 +24,16 @@ export async function POST(request: NextRequest){
 
         const newUser = new User({
             username,
-            eamil,
+            email,
             password: hashedPassword
         })
 
         const savedUser = await newUser.save()
         console.log(savedUser);
 
+        const userId = savedUser._id
         //send verification email
-        await sendEmail({email, emailType: "VERFIY", userId: savedUser._id})
+        await sendEmail({email, emailType: "VERFIY", userId: userId})
 
         return NextResponse.json({
             message: "user registered successfully",

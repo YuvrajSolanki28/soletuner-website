@@ -1,9 +1,9 @@
-import { connect } from 'mongoose'
+import { connect } from '../../../../dbConfig/dbConfig'
 import { NextRequest, NextResponse } from 'next/server'
 
 
 connect()
-export async function GET(request: NextRequest){
+export async function GET(request){
     try {
         const respone = NextResponse.json({
             message: "Logout successfully",

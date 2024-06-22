@@ -15,7 +15,7 @@ const NavBar = () => {
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>About</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Shpes</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Watch</Link>
-          <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Logout</Link>
+          <Link href="/login" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Login</Link>
         </div>
 
         <Link href="/cart" className='text-slate-600 px-4 py-2 font-bold hover:text-white hover:cursor-pointer'>

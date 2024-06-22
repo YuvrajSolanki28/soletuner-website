@@ -1,10 +1,10 @@
-import {connect} from '@/dbConfig/dbConfig'
-import User from '@/models/userModel'
+import { connect } from '../../../../dbConfig/dbConfig'
+import User from '../../../../models/userModels'
 import { NextRequest, NextResponse } from 'next/server'
 
 connect()
 
-export async function POST(request: NextRequest){
+export async function POST(request){
     try {
         const reqBody = await request.json()
         const {token} = reqBody
