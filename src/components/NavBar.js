@@ -12,7 +12,7 @@ const NavBar = () => {
 
         <div className="flex space-x-6">
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Home</Link>
-          <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>About</Link>
+          <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Aboutme</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Shpes</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Watch</Link>
           <Link href="/login" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Login</Link>
