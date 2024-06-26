@@ -20,7 +20,7 @@ export default function SingupPage() {
       setloading(true);
       const response = await axios.post("/api/users/signup", user)
       console.log("Signup success", response.data);
-      redirect('/login')
+      route.push('/login')
     } catch (error) {
       console.log("signup Failed");
       toast.error(error.message);
@@ -49,7 +49,7 @@ export default function SingupPage() {
             <form className="space-y-4 md:space-y-6">
               <div>
                 <label
-                  for="username"
+                  htmlFor="username"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   User Name
@@ -69,7 +69,7 @@ export default function SingupPage() {
               </div>
               <div>
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Your email
@@ -86,7 +86,7 @@ export default function SingupPage() {
               </div>
               <div>
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Password
@@ -94,9 +94,7 @@ export default function SingupPage() {
                 <input
                   type="password"
                   value={user.password}
-                  onChange={(e) =>
-                    setuser({ ...user, password: e.target.value })
-                  }
+                  onChange={(e) => setuser({ ...user, password: e.target.value })}
                   id="password"
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -115,7 +113,7 @@ export default function SingupPage() {
                   </div>
                   <div className="ml-3 text-sm">
                     <label
-                      for="remember"
+                      htmlFor="remember"
                       className="text-gray-500 dark:text-gray-300"
                     >
                       Remember me
@@ -124,7 +122,6 @@ export default function SingupPage() {
                 </div>
               </div>
               <button
-              
                 onClick={onSingup}
                 className="w-full text-white  dark:bg-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center active:scale-95"
               >

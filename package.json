@@ -20,15 +20,17 @@
     "mongoose": "^8.4.3",
     "next": "^14.2.3",
     "next-auth": "^4.24.7",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^6.9.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
-    "stripe": "^13.11.0"
+    "stripe": "^13.11.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/nodemailer": "^6.4.15",
+    "@types/react": "18.3.3",
     "autoprefixer": "^10.4.16",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",

@@ -10,7 +10,7 @@ const NavBar = () => {
     <nav className='bg-black p-2 flex justify-between'>
         <div className='text-slate-600 font-bold text-3xl'>Soleturner</div>
 
-        <div class="flex space-x-6">
+        <div className="flex space-x-6">
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Home</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>About</Link>
           <Link href="/" className='text-slate-600 font-bold pt-2 hover:text-white hover:cursor-pointer'>Shpes</Link>

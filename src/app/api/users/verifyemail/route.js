@@ -10,18 +10,18 @@ export async function POST(request){
         const {token} = reqBody
         console.log(token);
 
-        await User.findOne({verifyToken: token, verifuTokenEpiry: {$gt: Date.now()}})
+        const user = await User.findOne({verifyToken: token, verifyTokenEpiry: {$gt: Date.now()}})
 
-        if (!User) {
+        if (!user) {
             return NextResponse.json({error: "Invalid token"},{status:400})
         }
         console.log(User);
 
-        User.isVerifiyed = true
-        User.verifyToken = undefined
-        User.verifuTokenEpiry = undefined
+        user.isVerifiyed = true
+        user.verifyToken = undefined
+        user.verifuTokenEpiry = undefined
 
-        await User.save()
+        await user.save()
 
         return NextResponse.json({
             message: "Email verified successfully",
